@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            textarea{
+                width: 70%;
+                
+            }
+
+
+
+        </style>
+        
+    </head>
+    <body>
+        
+        
+        {{myfrm.media}}
+        {{myfrm.as_p}}
+        <input type="submit" value="Submit" onclick="TextConvert()">
+
+        
+        <p>HTM Editor</p>
+        <textarea id="htmldata" rows="10" ></textarea>
+    </body>
+</html>
+
+ <script>
+    function TextConvert() {
+        var y = CKEDITOR.instances['id_body'].getData();
+        var x = document.getElementById('htmldata');
+        x.innerHTML=y
+        
+    }
+</script> 
+
+
+
+ 
